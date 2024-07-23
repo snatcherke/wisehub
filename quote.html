@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quote Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #quoteBox {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+        }
+        #quoteBox button {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #quoteBox button:hover {
+            background: #0056b3;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<select id="categorySelect">
+    <option value="">Select a category</option>
+    <option value="education">Education</option>
+    <option value="love">Love</option>
+    <option value="advice">Advice</option>
+</select>
+
+<div id="quoteBox">
+    <p id="quoteText"></p>
+    <button onclick="hideQuote()">Close</button>
+</div>
+
+<script>
+    const seenQuotes = new Set();
+
+    function generateQuote(category) {
+        const possibleQuotes = {
+            education: [
+                "Education is the key to unlock the golden door of freedom.",
+                "The roots of education are bitter, but the fruit is sweet.",
+                "Education is not the filling of a pail, but the lighting of a fire."
+            ],
+            love: [
+                "Love is the only force capable of transforming an enemy into a friend.",
+                "To love and be loved is to feel the sun from both sides.",
+                "Love is a canvas furnished by nature and embroidered by imagination."
+            ],
+            advice: [
+                "The best way to predict the future is to invent it.",
+                "In the middle of difficulty lies opportunity.",
+                "Life is 10% what happens to us and 90% how we react to it."
+            ]
+        };
+
+        const quotes = possibleQuotes[category].filter(quote => !seenQuotes.has(quote));
+        if (quotes.length === 0) {
+            seenQuotes.clear();
+            return "No new quotes available. Try again!";
+        }
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quote = quotes[randomIndex];
+        seenQuotes.add(quote);
+        return quote;
+    }
+
+    const quoteBox = document.getElementById('quoteBox');
+    const quoteText = document.getElementById('quoteText');
+    const categorySelect = document.getElementById('categorySelect');
+
+    categorySelect.addEventListener('change', function() {
+        const category = this.value;
+        if (category) {
+            const quote = generateQuote(category);
+            quoteText.textContent = quote;
+            showQuote();
+            setTimeout(hideQuote, 5000);
+        }
+    });
+
+    function showQuote() {
+        quoteBox.style.display = 'block';
+    }
+
+    function hideQuote() {
+        quoteBox.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

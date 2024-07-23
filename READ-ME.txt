@@ -1,0 +1,10 @@
+  =>  Template Name    : WiseHub
+
+  =>  Template Link    : https://htmlcodex.com/WiseHub-html-template
+
+  =>  Template License : https://htmlWiseHub.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : SNATCHER
+  =>  Author Website   : https://github.com/snatcherke
+
+  =>  About HTML Codex : SNATCHER is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://SNATCHER.com/about-us )
