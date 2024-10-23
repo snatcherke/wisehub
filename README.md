@@ -30,7 +30,7 @@ Kindly click [here](https://snatcherke.github.io/wisehub/)
 We welcome contributions from fellow developers, educators, and anyone passionate about advancing educational resources in technology! If you would like to contribute to the WiseHub project, please reach out to us.
 How to Contribute:
 
- **Contact Us**: Please click [here](snatcher061@gmail.com) to express your interest in contributing.
+ **Contact Us**: Please click [here](elphas444@gmail.com) to express your interest in contributing.
   **Discuss Ideas**: Share your ideas, suggestions, or specific contributions you have in mind. We value collaboration and would love to hear your thoughts!
  **Collaboration Guidelines**: Once we connect, we’ll discuss the guidelines and processes for contributing to the project.
 
@@ -60,4 +60,4 @@ This repository is meant to **foster learning** and sharing ideas. Please respec
 If you have any questions or need further assistance, reach out to:
 
 Snatcherke
-[Click here to Email Us for any question](snatcher061@gmail.com)
+[Click here to Email Us for any question](elphas444@gmail.com)
